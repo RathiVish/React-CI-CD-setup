@@ -1,24 +1,20 @@
-name: CI-Vish
+name: "CI sample react app-Vish"
 
 on:
-  push:
-    branches:
-      - main
-      - master
-  pull_request:
-    branches:
-      - main
-      - master
-
+    push:
+        branches:
+          - main
+          - master
+  
 jobs:
-  build and test:
+  build-and-test:
     runs-on: ubuntu-latest
 
     steps:
         - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '21'
-          
+          uses: actions/setup-node@v3
+          with:
+            node-version: '21'
+
         - name: Check node version
           run: node -v
