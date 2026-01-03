@@ -13,11 +13,12 @@ on:
 jobs:
   build and test:
     runs-on: ubuntu-latest
+
     steps:
-      name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '21'
-      name: Check node version
-      run: node -v
-    
+        - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '21'
+          
+        - name: Check node version
+          run: node -v
