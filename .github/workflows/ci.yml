@@ -14,25 +14,24 @@ jobs:
         - name: Setup Node.js
           uses: actions/setup-node@v3
           with:
-            node-version: '21'
-
+            node-version: '22
         - name: Check node version
           run: node -v
 
         - name: Clone the repository
           uses: actions/checkout@v3
 
-        - name: List Dependencies  
+        - name: List Directories  
           run: ls
           
         - name: Install dependencies
           run: npm install
 
-        - name: List Dependencies after install  
+        - name: List Directories after install  
           run: ls
 
         - name: Build the project
-          run: npm run build
+          run: npm dev run
 
         - name: Run the tests
           run: npm run test
