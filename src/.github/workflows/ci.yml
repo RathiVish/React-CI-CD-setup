@@ -1,0 +1,21 @@
+name: CI-Vish
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+
+jobs:
+  build and test:
+    runs-on: ubuntu-latest
+    steps:
+      name: Setup Node.js
+      uses: actions/setup-node@v3
+        with:
+          node-version: '21'
+    
