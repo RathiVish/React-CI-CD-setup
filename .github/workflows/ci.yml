@@ -19,10 +19,13 @@ jobs:
         - name: Check node version
           run: node -v
 
+        - name: List Dependencies  
+          run: ls
+          
         - name: Install dependencies
           run: npm install
 
-        - name: List Dependencies  
+        - name: List Dependencies after install  
           run: ls
 
         - name: Build the project
