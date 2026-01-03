@@ -15,7 +15,7 @@ jobs:
           uses: actions/setup-node@v3
           with:
             node-version: '22'
-            
+
         - name: Check node version
           run: node -v
 
@@ -32,7 +32,7 @@ jobs:
           run: ls
 
         - name: Build the project
-          run: npm dev run
+          run: npm run build
 
         - name: Run the tests
           run: npm run test
